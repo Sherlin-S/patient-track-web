@@ -28,7 +28,7 @@ body {
 
 /* Utility Classes (migrated from original CSS) */
 .btn {
-  @apply w-full py-3 px-6 bg-green-600 text-white text-base rounded cursor-pointer hover:bg-blue-500;
+  @apply w-full py-3 px-6 bg-green-600 text-white text-base rounded cursor-pointer hover:bg-blue-200;
 }
 
 .button-group {
@@ -44,12 +44,12 @@ body {
 }
 
 .form-container button {
-  @apply w-full py-3 bg-green-600 text-white text-base rounded hover:bg-blue-500;
+  @apply w-full py-3 bg-green-600 text-white text-base rounded hover:bg-blue-200;
 }
 
 /* Header + Nav */
 header {
-  @apply bg-blue-500 text-white p-4;
+  @apply bg-blue-200 text-white p-4;
 }
 
 nav {
@@ -88,5 +88,5 @@ nav ul li a {
 
 /* Footer */
 footer {
-  @apply text-center p-4 bg-blue-500 text-white w-full;
+  @apply text-center p-4 bg-blue-200 text-white w-full;
 }
