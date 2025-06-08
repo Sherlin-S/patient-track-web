@@ -13,103 +13,107 @@ const geistMono = Geist_Mono({
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/pages/index.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className={`${geistSans.className} ${geistMono.className} font-sans`}>
+      <header className="bg-white shadow">
+        <nav className="flex justify-between items-center p-4 max-w-7xl mx-auto">
+          <div className="logo">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="https://www.logopeople.in/wp-content/uploads/2023/09/hospital-logo4.jpg"
+              alt="PatientTrack Logo"
+              width={150}
+              height={50}
+              className="object-contain"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+          <ul className="flex gap-4 text-lg">
+            <li><a href="#home" className="hover:underline">Home</a></li>
+            <li><a href="/login" className="hover:underline">Login</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section id="home" className="text-center py-20 bg-gray-50">
+        <h1 className="text-4xl font-bold mb-4">Welcome to PatientTrack</h1>
+        <p className="text-lg mb-6">
+          Streamline hospital operations with real-time patient flow and status tracking.
+        </p>
+        <a href="#features">
+          <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-300">
+            Explore Features
+          </button>
+        </a>
+      </section>
+
+      <section id="about" className="py-16 px-4 max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl font-semibold mb-4">About PatientTrack</h2>
+        <p className="text-lg">
+          PatientTrack is a web-based solution designed to enhance hospital efficiency by digitizing patient flow management. Our system supports both inpatients and outpatients, providing real-time updates to reduce wait times and improve care delivery.
+        </p>
+      </section>
+
+      <section id="features" className="py-16 bg-gray-100">
+        <h2 className="text-3xl text-center font-semibold mb-10">Key Features</h2>
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
+          <div className="text-center">
+            <Image
+              src="https://interhospi.com/wp-content/uploads/sites/3/2022/12/blueIOT-scaled.jpg"
+              alt="Real-Time Tracking"
+              width={400}
+              height={250}
+              className="feature-image"
+            />
+            <h3 className="text-xl font-semibold mt-4">Real-Time Updates</h3>
+            <p className="mt-2">Monitor patient status instantly across departments.</p>
+          </div>
+          <div className="text-center">
+            <Image
+              src="https://www.shutterstock.com/image-photo/online-medical-records-document-management-260nw-2474238105.jpg"
+              alt="Admin Control"
+              width={400}
+              height={250}
+              className="feature-image"
+            />
+            <h3 className="text-xl font-semibold mt-4">Administrative Control</h3>
+            <p className="mt-2">Centralized dashboard for efficient management.</p>
+          </div>
+          <div className="text-center">
+            <Image
+              src="https://www.ripplesiot.com/wp-content/uploads/2022/12/patient-wait.png"
+              alt="Reduced Wait Times"
+              width={400}
+              height={250}
+              className="feature-image"
+            />
+            <h3 className="text-xl font-semibold mt-4">Reduced Wait Times</h3>
+            <p className="mt-2">Optimize patient flow to minimize delays.</p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+      </section>
+
+      <section id="login" className="py-20 text-center">
+        <h2 className="text-3xl font-semibold mb-4">Access Your Account</h2>
+        <p className="text-lg mb-6">Log in to manage patient flow or register new patients to get started!</p>
+        <a href="/login">
+          <button className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
+            Login
+          </button>
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      <footer className="bg-blue-200 text-gray-800 text-center py-6">
+        <p>© 2025 PatientTrack. Built with care for better care.</p>
       </footer>
+
+      {/* ✅ Internal CSS */}
+      <style jsx>{`
+        .logo img {
+          height: 48px;
+        }
+        .feature-image {
+          border-radius: 0.5rem;
+          object-fit: cover;
+        }
+      `}</style>
     </div>
   );
 }
